@@ -1,2 +1,2 @@
-# damp-compose
+# DAMP
 Docker + Apache +  MySQL + PHP. Very Moist!
