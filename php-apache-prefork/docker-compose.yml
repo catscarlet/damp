@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    php_modified-docker:
+        image: php_modified
+        restart: unless-stopped
+        ports:
+            - 80:80
+        environment:
+            MYSQL_SERVER: '192.168.233.40'
+            MYSQL_ACCOUNT: 'my-web-test-user'
+            MYSQL_PASSWORD: '8qFV8GgNnT6moLZw'
+            MYSQL_DATABASE: 'my-web-test'
+        volumes:
+            - /var/www/html:/var/www/html

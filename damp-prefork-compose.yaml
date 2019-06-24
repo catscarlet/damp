@@ -1,0 +1,39 @@
+version: '3.3'
+
+services:
+    php-apache-prefork:
+        depends_on:
+            - db
+        build:
+            context: ./php-apache-prefork
+            dockerfile: Dockerfile
+        ports:
+            - 80:80
+        restart: "no"
+        environment:
+            MYSQL_SERVER: db:3306
+            MYSQL_DATABASE: damp-database
+            MYSQL_USER: damp-user
+            MYSQL_PASSWORD: damp-password
+        volumes:
+            - www-data-storage:/var/www/html
+    db:
+        image: mysql:5.7
+        volumes:
+            - db-data-storage:/var/lib/mysql
+        restart: "no"
+        environment:
+            MYSQL_ROOT_PASSWORD: mysql-root-password
+            MYSQL_DATABASE: damp-database
+            MYSQL_USER: damp-user
+            MYSQL_PASSWORD: damp-password
+    www-data:
+        build:
+            context: ./www-data
+            dockerfile: Dockerfile
+        restart: "no"
+        volumes:
+            - www-data-storage:/var/www/html
+volumes:
+    www-data-storage:
+    db-data-storage:
