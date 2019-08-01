@@ -1,1 +1,0 @@
-MySQL Database stores here.
