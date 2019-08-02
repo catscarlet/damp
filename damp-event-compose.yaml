@@ -14,6 +14,7 @@ services:
         volumes:
             - ./sites/sites-document/:/var/www/html/
             - ./sites/sites-conf/:/usr/local/apache2/sites-conf/
+            - ./logs/apache2/:/var/log/apache2/
     php-fpm:
         depends_on:
             - db
@@ -23,7 +24,7 @@ services:
         restart: "no"
         volumes:
             - ./sites/sites-document/:/var/www/html/
-        user: daemon
+        user: 1000:1000
     db:
         image: mysql:5.7
         volumes:
@@ -31,6 +32,3 @@ services:
         restart: "no"
         environment:
             MYSQL_ROOT_PASSWORD: damp-mysql-database-root-password
-volumes:
-    www-data-storage:
-    db-data-storage:
