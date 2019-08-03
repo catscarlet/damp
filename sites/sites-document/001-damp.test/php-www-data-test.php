@@ -1,6 +1,7 @@
 <?php
 
 header('Content-Type: text/plain');
+#define('MYSQL_SERVER', '127.0.0.1');
 define('MYSQL_SERVER', 'db');
 define('MYSQL_USER', 'root');
 define('MYSQL_PASSWORD', 'damp-mysql-database-root-password');

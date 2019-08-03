@@ -15,6 +15,7 @@ services:
             - ./sites/sites-document/:/var/www/html/
             - ./sites/sites-conf/:/usr/local/apache2/sites-conf/
             - ./logs/apache2/:/var/log/apache2/
+        #network_mode: host
     php-fpm:
         depends_on:
             - db
@@ -25,10 +26,12 @@ services:
         volumes:
             - ./sites/sites-document/:/var/www/html/
         user: 1000:1000
+        #network_mode: host
     db:
         image: mysql:5.7
         volumes:
             - ./mysql-db-storage:/var/lib/mysql
         restart: "no"
+        #network_mode: host
         environment:
             MYSQL_ROOT_PASSWORD: damp-mysql-database-root-password
