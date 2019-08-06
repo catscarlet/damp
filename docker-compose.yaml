@@ -10,7 +10,7 @@ services:
         ports:
             - 80:80
             - 443:443
-        restart: "no"
+        restart: always
         volumes:
             - ./sites/sites-document/:/var/www/html/
             - ./sites/sites-conf/:/usr/local/apache2/sites-conf/
@@ -22,7 +22,7 @@ services:
         build:
             context: ./php-fpm
             dockerfile: Dockerfile
-        restart: "no"
+        restart: always
         volumes:
             - ./sites/sites-document/:/var/www/html/
         user: 1000:1000
@@ -31,7 +31,7 @@ services:
         image: mysql:5.7
         volumes:
             - ./mysql-db-storage:/var/lib/mysql
-        restart: "no"
+        restart: always
         #network_mode: host
         environment:
             MYSQL_ROOT_PASSWORD: damp-mysql-database-root-password
