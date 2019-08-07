@@ -25,7 +25,7 @@ services:
         restart: always
         volumes:
             - ./sites/sites-document/:/var/www/html/
-        user: 1000:1000
+        user: www-data:www-data
         #network_mode: host
     db:
         image: mysql:5.7
