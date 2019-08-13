@@ -25,6 +25,7 @@ services:
         restart: always
         volumes:
             - ./sites/sites-document/:/var/www/html/
+            - ./php_debug:/php_debug
         user: www-data:www-data
         #network_mode: host
     db:
