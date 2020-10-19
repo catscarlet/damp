@@ -28,6 +28,8 @@ services:
             - ./php_debug:/php_debug
         user: www-data:www-data
         #network_mode: host
+        environment:
+            MYSQL_SERVER: db
     db:
         image: mysql:5.7
         volumes:
