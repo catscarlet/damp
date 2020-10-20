@@ -30,6 +30,9 @@ services:
         #network_mode: host
         environment:
             MYSQL_SERVER: db
+            MYSQL_USER_EXAMPLE: root
+            MYSQL_PASSWORD_EXAMPLE: damp-mysql-database-root-password
+            MYSQL_DATABASE_EXAMPLE: information_schema
     db:
         image: mysql:5.7
         volumes:

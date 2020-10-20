@@ -1,15 +1,16 @@
 <?php
 
 header('Content-Type: text/plain');
-//define('MYSQL_SERVER', '127.0.0.1');
-define('MYSQL_SERVER', 'db');
-define('MYSQL_USER', 'root');
-define('MYSQL_PASSWORD', 'damp-mysql-database-root-password');
-define('MYSQL_DATABASE', 'mysql');
+define('MYSQL_SERVER', $_ENV['MYSQL_SERVER']);
+define('MYSQL_USER', $_ENV['MYSQL_USER_EXAMPLE']);
+define('MYSQL_PASSWORD', $_ENV['MYSQL_PASSWORD_EXAMPLE']);
+define('MYSQL_DATABASE', $_ENV['MYSQL_DATABASE_EXAMPLE']);
 
-echo 'Server Information: '."\n";
+echo 'Damp Server Information: '."\n";
+echo '---------------------------------------------------------------------'."\n";
+echo 'Information of php-fpm container: '."\n";
 $hostname = file_get_contents('/etc/hostname');
-echo 'hostname: '.$hostname."\n";
+echo 'Hostname: '.$hostname."\n";
 echo 'SERVER_NAME: '.$_SERVER['SERVER_NAME']."\n";
 echo 'SERVER_ADDR: '.$_SERVER['SERVER_ADDR']."\n";
 echo 'SERVER_PORT: '.$_SERVER['SERVER_PORT']."\n";
@@ -32,6 +33,17 @@ if (!MYSQL_SERVER || !MYSQL_USER || !MYSQL_PASSWORD || !MYSQL_DATABASE) {
     if ($mysqli->connect_errno) {
         echo 'Failed to connect to MySQL: ('.$mysqli->connect_errno.') '.$mysqli->connect_error;
     } else {
+        echo 'MySQL Version check: '."\n";
+        $tables = [];
+        $query = "SELECT VERSION()";
+        echo '$query: '.$query."\n";
+        $result = $mysqli->query($query);
+        $tables = $result->fetch_array(MYSQLI_NUM);
+        print_r($tables);
+        $result->free();
+        echo "\n";
+
+        echo 'SHOW tables of: '.MYSQL_DATABASE."\n";
         $tables = [];
         $query = 'SHOW tables';
         echo '$query: '.$query."\n";
