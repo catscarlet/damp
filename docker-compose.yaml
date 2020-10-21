@@ -16,6 +16,8 @@ services:
             - ./sites/sites-conf/:/usr/local/apache2/sites-conf/
             - ./logs/apache2/:/var/log/apache2/
         #network_mode: host
+        environment:
+            TZ: ${TZ}
     php-fpm:
         depends_on:
             - db
@@ -29,6 +31,7 @@ services:
         user: www-data:www-data
         #network_mode: host
         environment:
+            TZ: ${TZ}
             MYSQL_SERVER: db
             MYSQL_USER_EXAMPLE: root
             MYSQL_PASSWORD_EXAMPLE: damp-mysql-database-root-password
@@ -40,4 +43,5 @@ services:
         restart: always
         #network_mode: host
         environment:
+            #TZ: ${TZ}
             MYSQL_ROOT_PASSWORD: damp-mysql-database-root-password

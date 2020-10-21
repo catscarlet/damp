@@ -43,6 +43,16 @@ if (!MYSQL_SERVER || !MYSQL_USER || !MYSQL_PASSWORD || !MYSQL_DATABASE) {
         $result->free();
         echo "\n";
 
+        echo 'MySQL Timezone check: '."\n";
+        $tables = [];
+        $query = "SELECT TIMEDIFF(NOW(), UTC_TIMESTAMP)";
+        echo '$query: '.$query."\n";
+        $result = $mysqli->query($query);
+        $tables = $result->fetch_array(MYSQLI_NUM);
+        print_r($tables);
+        $result->free();
+        echo "\n";
+
         echo 'SHOW tables of: '.MYSQL_DATABASE."\n";
         $tables = [];
         $query = 'SHOW tables';
