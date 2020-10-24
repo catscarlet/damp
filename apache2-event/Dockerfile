@@ -1,3 +1,3 @@
-FROM httpd:2.4.39
+FROM httpd:2.4
 
 COPY usr/ /usr/
