@@ -141,11 +141,12 @@ docker-compose down --rmi all && docker-compose up --force-recreate --build -d
 
 ## 一些事项
 
+首先：**如果要在生产环境下使用本项目，请修改 docker-compose.yaml 中 MySQL 的默认密码 `MYSQL_ROOT_PASSWORD`，并删除所有 `_EXAMPLE` 参数！**
+
 1. Apache 的日志，HTTP 和 HTTPS 日志目前写在了一起。
 2. Apache 的日志输出到了 logs/apache/ 下，而 php-fpm 和 mysql 的日志输出到了 Docker 的标准输出中，也就是需要用 `docker-compose logs` 进行查看
 3. docker-compose 中的时区设定（environment TZ）只负责 apache 和 php 的日志记录。[修改系统的时区不会影响网站应用的时区][1]
 4. MySQL 对系统时区不感冒，[即使只是修改错误日志的时区也需要修改数据表][2]
-
 
 ## Todo list
 

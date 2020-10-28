@@ -139,11 +139,12 @@ For more information, please refer to Docker and Docker Compose Documents.
 
 ## Something notable things.
 
+First thing First: **If you want to use DAMP in production environment, please change the default password of MySQL, the `MYSQL_ROOT_PASSWORD` in `docker-compose.yaml`, then remove all `_EXAMPLE` parameters**
+
 1. About the logs of Apache, HTTP log and HTTPS log are mixed now. This is a Apache default site-conf thing. Maybe we should change it.
 2. Also about logs, the Apache log files are output to logs/apache/, while the logs of php-fpm and mysql are output to stdout of docker, that leads to `docker-compose logs`
 3. In docker-compose, the Timezone setting (environment TZ) only affect logs of apache and php. [PHP: The default timezone used is UTC if you don't set it][1]
 4. MySQL won't get affected by system timezone setting, even the log. [MySQL's default time zone of timestamps in messages written to the error log value is UTC][2]
-
 
 ## Todo list
 
