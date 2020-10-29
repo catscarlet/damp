@@ -10,7 +10,7 @@ DAMP 取名致敬于 LAMP。
 
 项目基于 Docker 和 Docker Compose 实现。
 
-本项目的初衷是为了在全新环境下快速建立与 LAMP 相同的网站服务器环境。*（如果您是希望替换现有的网站项目，请等待我的其他项目实现）*
+本项目的初衷是为了在全新环境下快速建立与 LAMP 相同的网站服务器环境。*（如果您是希望替换现有的网站项目，请参考这个项目：[DAMP Alternative](https://github.com/catscarlet/damp-alternative)）*
 
 ## 特性
 

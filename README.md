@@ -8,7 +8,7 @@ DAMP is a composing tool that will help you deploy Apache, MySQL and PHP in one 
 
 DAMP is named to pay homage to LAMP.
 
-The idea is to deploy the server environment as same as LAMP on a brand new server. *(If you want to replace an exist server, please wait for my another implementation)*
+The idea is to deploy the server environment as same as LAMP on a brand new server. *(If you want to replace an exist server, please check this one: [DAMP Alternative](https://github.com/catscarlet/damp-alternative))*
 
 ## Features
 
