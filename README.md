@@ -145,6 +145,7 @@ First thing First: **If you want to use DAMP in production environment, please c
 2. Also about logs, the Apache log files are output to logs/apache/, while the logs of php-fpm and mysql are output to stdout of docker, that leads to `docker-compose logs`
 3. In docker-compose, the Timezone setting (environment TZ) only affect logs of apache and php. [PHP: The default timezone used is UTC if you don't set it][1]
 4. MySQL won't get affected by system timezone setting, even the log. [MySQL's default time zone of timestamps in messages written to the error log value is UTC][2]
+5. You can't access MySQL's port 3306 outside of DAMP by default. To make it accessible, uncomment the MySQL ports parameters in `docker-compose.yaml`
 
 ## Todo list
 
