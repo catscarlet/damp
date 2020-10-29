@@ -2,13 +2,15 @@
 
 Docker + Apache + MySQL + PHP. Very Moist!
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 DAMP is a composing tool that will help you deploy Apache, MySQL and PHP in one shot.
 
 DAMP is named to pay homage to LAMP.
 
 The idea is to deploy the server environment as same as LAMP on a brand new server. *(If you want to replace an exist server, please check this one: [DAMP Alternative](https://github.com/catscarlet/damp-alternative))*
+
+DAMP Project is licensed under the Mozilla Public License Version 2.0 and the Anti 996 License Version 1.0 (Draft)
 
 ## Features
 

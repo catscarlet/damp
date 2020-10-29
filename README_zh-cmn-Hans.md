@@ -2,7 +2,7 @@
 
 Docker + Apache + MySQL + PHP，特别潮的解决方案。
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 DAMP 是一个基于 Docker 的用于搭建 Apache + MySQL + PHP 服务器环境的快速编排工具。
 
@@ -11,6 +11,8 @@ DAMP 取名致敬于 LAMP。
 项目基于 Docker 和 Docker Compose 实现。
 
 本项目的初衷是为了在全新环境下快速建立与 LAMP 相同的网站服务器环境。*（如果您是希望替换现有的网站项目，请参考这个项目：[DAMP Alternative](https://github.com/catscarlet/damp-alternative)）*
+
+DAMP 项目使用 Mozilla Public License Version 2.0 和 Anti 996 License Version 1.0 (Draft) 授权
 
 ## 特性
 
