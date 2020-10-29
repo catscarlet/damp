@@ -29,8 +29,6 @@ DAMP Project is licensed under the Mozilla Public License Version 2.0 and the An
 - PHP version 7.4, works by PHP-FPM
 - MySQL version 5.7.
 
-项目实现可以参考每个组件的 Dockerfile。所有组件均未指定小版本号，如有需要请手动指定。
-
 Refer to Dockerfiles for more information. All X.Y.Z version number Z are not assigned. Assign by yourself if you wish.
 
 ### Structure

@@ -155,7 +155,7 @@ docker-compose down --rmi all && docker-compose up --force-recreate --build -d
 
 - MySQL 升级到 8.0
 - 分离 Apache 的 HTTP 和 HTTPS 日志
-- HTTP/3 (If Apache starts to support it, damp will follow)
+- HTTP/3 (如果 Apache 开始支持，DAMP 即可以跟进)
 
 ------
 
