@@ -150,6 +150,8 @@ docker-compose down --rmi all && docker-compose up --force-recreate --build -d
 3. docker-compose 中的时区设定（environment TZ）只负责 apache 和 php 的日志记录。[修改系统的时区不会影响网站应用的时区][1]
 4. MySQL 对系统时区不感冒，[即使只是修改错误日志的时区也需要修改数据表][2]
 5. 默认无法从 DAMP 外部访问 MySQL 的 3306 端口。如有需要，请取消 docker-compose.yaml 中 MySQL 的 ports 参数注释。
+6. 在 `docker-compose.yaml` 中对 MySQL 设置的 MYSQL_ROOT_PASSWORD 只在第一次运行 DAMP 时初始化生效。初始化完成之后，MySQL 的 root 密码将会固定为此密码，无法通过修改 `docker-compose.yaml` 的 MYSQL_ROOT_PASSWORD 字段修改 MySQL 密码。
+
 
 ## Todo list
 

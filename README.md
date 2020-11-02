@@ -146,6 +146,7 @@ First thing First: **If you want to use DAMP in production environment, please c
 3. In docker-compose, the Timezone setting (environment TZ) only affect logs of apache and php. [PHP: The default timezone used is UTC if you don't set it][1]
 4. MySQL won't get affected by system timezone setting, even the log. [MySQL's default time zone of timestamps in messages written to the error log value is UTC][2]
 5. You can't access MySQL's port 3306 outside of DAMP by default. To make it accessible, uncomment the MySQL ports parameters in `docker-compose.yaml`
+6. The MYSQL_ROOT_PASSWORD of MySQL in `docker-compose.yaml` only works in the first initialization. Once the initialization is completed, the root password of MySQL will be fixed and it can't be changed it by editing MYSQL_ROOT_PASSWORD in `docker-compose.yaml`.
 
 ## Todo list
 
