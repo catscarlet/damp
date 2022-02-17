@@ -137,7 +137,7 @@ For more information, please refer to Docker and Docker Compose Documents.
 
 ------
 
-## Something notable things.
+## Some notable things.
 
 First thing First: **If you want to use DAMP in production environment, please change the default password of MySQL, the `MYSQL_ROOT_PASSWORD` in `docker-compose.yaml`, then remove all `_EXAMPLE` parameters**
 
