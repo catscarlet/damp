@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM ghcr.io/catscarlet/php:7.4-fpm-cve-2026-109618-109619-free
 
 #COPY etc/ /etc/
 
